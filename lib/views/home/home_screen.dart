@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ],
           title: const Text(
-            "Music Player",
+            "Lyrics Finder",
             style: TextStyle(
               color: kFontColor,
               fontSize: 32,
@@ -97,7 +97,8 @@ class HomeScreen extends StatelessWidget {
                                     MaterialPageRoute(builder: ((context) {
                                   return DetailsScreen(
                                       trackId: state
-                                          .trendingList[index].track.trackId.toString());
+                                          .trendingList[index].track.trackId
+                                          .toString());
                                 })));
                               },
                               child: Container(
@@ -181,7 +182,10 @@ class HomeScreen extends StatelessWidget {
                     );
                   } else {
                     return const Center(
-                      child: CircularProgressIndicator(),
+                      child: CircularProgressIndicator(
+                        strokeWidth: 1,
+                        color: kCircleBarColor,
+                      ),
                     );
                   }
                 },

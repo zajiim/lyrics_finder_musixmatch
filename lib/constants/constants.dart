@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-
 //Colors
 const kFontColor = Colors.white;
 const kBackgroundColor = Colors.black;
 const kBottomNavBarColor = Color(0xff0A0A0A);
 const kItemBGColor = Colors.grey;
+const kCircleBarColor = Color(0xffF02457);
 
 //Spacers
 const k5Height = SizedBox(height: 5);

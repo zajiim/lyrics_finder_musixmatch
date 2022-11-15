@@ -7,9 +7,9 @@ import 'package:musixmatch/domain/models/lyrics/lyrics_repository.dart';
 
 import '../../constants/constants.dart';
 
-class LyricsPage extends StatelessWidget {
+class LyricsScreen extends StatelessWidget {
   final String trackId;
-  const LyricsPage({
+  const LyricsScreen({
     super.key,
     required this.trackId,
   });
@@ -46,7 +46,7 @@ class LyricsPage extends StatelessWidget {
               );
             } else if (state is LyricsLoadedState) {
               return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
+                padding: const EdgeInsets.symmetric(horizontal: 18),
                 child: Column(
                   children: [
                     const SizedBox(
@@ -65,7 +65,10 @@ class LyricsPage extends StatelessWidget {
               );
             } else {
               return const Center(
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  strokeWidth: 1,
+                  color: kCircleBarColor,
+                ),
               );
             }
           },

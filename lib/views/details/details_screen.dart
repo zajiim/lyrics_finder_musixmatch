@@ -6,7 +6,7 @@ import 'package:musixmatch/blocs/details/details_states.dart';
 import 'package:musixmatch/domain/models/details/details_repository.dart';
 
 import '../../constants/constants.dart';
-import '../lyrics/lyrics_page.dart';
+import '../lyrics/lyrics_screen.dart';
 
 class DetailsScreen extends StatelessWidget {
   final String trackId;
@@ -89,11 +89,14 @@ class DetailsScreen extends StatelessWidget {
                     const SizedBox(height: 20),
                     Center(
                       child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: kCircleBarColor,
+                        ),
                         onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => LyricsPage(
+                              builder: (context) => LyricsScreen(
                                 trackId: state.trackDetail.trackId.toString(),
                               ),
                             ),
@@ -107,7 +110,10 @@ class DetailsScreen extends StatelessWidget {
               );
             } else {
               return const Center(
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  strokeWidth: 1,
+                  color: kCircleBarColor,
+                ),
               );
             }
           },

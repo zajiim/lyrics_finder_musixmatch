@@ -5,6 +5,7 @@ import 'package:musixmatch/domain/models/details/details_repository.dart';
 import 'package:musixmatch/domain/models/home/home_repository.dart';
 import 'package:musixmatch/domain/models/lyrics/lyrics_repository.dart';
 import 'package:musixmatch/views/home/home_screen.dart';
+import 'package:musixmatch/views/main_screen.dart/main_screen.dart';
 
 import 'constants/constants.dart';
 
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const HomeScreen(),
+        home: const MainScreen(),
         theme: ThemeData(
           appBarTheme: const AppBarTheme(color: kBackgroundColor),
           backgroundColor: kBackgroundColor,
