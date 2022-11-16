@@ -19,7 +19,7 @@ class HomeRepository {
               .toList();
       return trendingMusicList;
     } else {
-      throw Exception("No internet connection");
+      throw Exception("Error occured");
     }
   }
 }

@@ -14,7 +14,7 @@ class LyricBloc extends Bloc<LyricsEvent, LyricsStates> {
         final lyricsData = await _lyricsRepository.getLyrics(event.trackId);
         emit(LyricsLoadedState(lyricsData));
       } catch (e) {
-        emit(LyricsErrorState("No internet detected"));
+        emit(LyricsErrorState("No internet connection"));
       }
     });
   }

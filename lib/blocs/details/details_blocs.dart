@@ -21,7 +21,7 @@ class DetailsBloc extends Bloc<DetailsEvent, DetailsStates> {
         emit(DetailsLoadedState(trackDetail));
       } catch (e) {
         log(e.toString());
-        emit(DetailsErrorState(e.toString()));
+        emit(DetailsErrorState("No internet connection"));
       }
     });
   }
